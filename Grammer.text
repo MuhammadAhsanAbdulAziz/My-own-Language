@@ -1,1 +1,5 @@
-Decl    : KEYWORD: Var IDENTIFIER COLON DATA_TYPE SEMICOLON
+expr    : term((PLUS | MINUS) term)*
+
+term    : factor((MUL | DIV) factor)*
+
+factor  : INT | FLOAT
